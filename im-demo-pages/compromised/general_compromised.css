@@ -1,0 +1,51 @@
+body{
+	margin: 0;
+	padding: 0;
+	font-size: 45px;
+	background: #dedede;
+font-family: "Arial", Arial, sans-serif;
+}
+
+.clear {
+	clear: both;
+}
+
+.container {
+	margin: 10px auto;
+	width: 1050px;
+	height: 670px;
+	background: #fff;
+	padding: 30px 20px;
+}
+
+.text {
+	height: 370px;
+}
+
+.text img {
+	float: left;
+	margin: 40px 50px 30px 40px;
+	height: 180px;
+}
+
+.text1 {
+	margin: 70px 20px 140px 20px;
+	font-size: 70px;
+	color: #cd2626;
+	font-weight: bold;
+	line-height: 150%;
+}	
+
+.footer {
+	border-top: 2px #aaa solid;
+	padding: 30px;
+	margin-top: 50px;
+display: flex;
+justify-content: space-between;
+}
+
+.footer img {
+	float: left;
+	height: 150px;
+}
+

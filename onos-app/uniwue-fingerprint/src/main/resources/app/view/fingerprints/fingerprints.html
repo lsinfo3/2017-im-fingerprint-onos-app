@@ -1,0 +1,103 @@
+<!-- partial HTML -->
+<div id="ov-fingerprints">
+
+    <div id="ov-fingerprint-left">
+
+        <div class="logo sardine-logo">
+            <img src="/onos/ui/app/view/fingerprints/sardine-logo.png" title="sardine">
+        </div>
+        <div class="logo uniwue-logo">
+            <img width="150px" height="100px" src="/onos/ui/app/view/fingerprints/uniwue-logo.png" title="uniwue">
+        </div>
+        <div class="logo ls3-logo">
+            <img height="100px" src="/onos/ui/app/view/fingerprints/ls3-logo.png" title="ls3">
+        </div>
+        <div class="bmbf-logo">
+            <img src="/onos/ui/app/view/fingerprints/bmbf_logo.png" title="bmbf">
+        </div>
+    </div>
+
+
+    <div id="ov-fingerprint-right">
+        <div  ng-show="msg.msg" class="msg {{msg.msgType}}">
+            {{msg.msg}}
+        </div>
+
+
+        <div class="heading_container">
+            <div class="floatLeft">
+                <h2 class="heading"> Fingerprint Overview</h2>
+            </div>
+
+            <div class="fingerprint-button info-button floatRight" ng-click="getData()">
+                Update
+            </div>
+            <div style="clear:both;"></div>
+        </div>
+
+
+        <h3 class="pending-heading">Pending</h3>
+        <div class="data-panel">
+            <table class="fingerprints-table pending-table">
+                <tr>
+                    <th>Device ID</th>
+                    <th>Status</th>
+
+                </tr>
+                <tr ng-repeat="row in data.pendingFingerprints">
+                    <td>{{row.deviceId}}</td>
+                    <td>{{row.statusFingerprint}}</td>
+                </tr>
+
+            </table>
+        </div>
+
+        <h3 class="blocked-heading">Blocked</h3>
+        <div class="data-panel">
+            <table class="fingerprints-table blocked-table">
+                <tr>
+                    <th>Device ID</th>
+                    <th>Static Summary</th>
+                    <th>Dynamic Summary</th>
+                    <th>Control</th>
+
+                </tr>
+                <tr ng-repeat="row in data.blockedFingerprints">
+                    <td>{{row.deviceId}}</td>
+                    <td>{{row.staticSummary}}</td>
+                    <td>{{row.dynamicSummary}}</td>
+                    <td>
+                        <div class="fingerprint-button register-button" ng-click="register(row.deviceId)">Register</div>
+                        <div class="fingerprint-button info-button" ng-click="details(row.deviceId)">Details</div>
+                    </td>
+                </tr>
+
+            </table>
+        </div>
+
+        <h3 class="trusted-heading">Trusted</h3>
+        <div class="data-panel">
+            <table class="fingerprints-table trusted-table">
+                <tr>
+                    <th>Device ID</th>
+                    <th>Static Summary</th>
+                    <th>Dynamic Summary</th>
+                    <th>Control</th>
+                </tr>
+                <tr ng-repeat="row in data.trustedFingerprints">
+                    <td>{{row.deviceId}}</td>
+                    <td>{{row.staticSummary}}</td>
+                    <td>{{row.dynamicSummary}}</td>
+                    <td>
+                        <div class="fingerprint-button unregister-button" ng-click="unregister(row.deviceId)">Unregister</div>
+                        <div class="fingerprint-button info-button" ng-click="details(row.deviceId)">Details</div>
+                    </td>
+                </tr>
+
+            </table>
+        </div>
+    </div>
+
+    <div style="clear:both;"></div>
+
+</div>

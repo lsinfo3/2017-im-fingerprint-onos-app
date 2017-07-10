@@ -1,0 +1,95 @@
+<!-- partial HTML -->
+<div id="ov-fingerprints">
+
+    <div id="ov-fingerprint-left">
+
+        <div class="logo sardine-logo">
+            <img src="/onos/ui/app/view/fingerprints/sardine-logo.png" title="sardine">
+        </div>
+        <div class="logo uniwue-logo">
+            <img width="150px" height="100px" src="/onos/ui/app/view/fingerprints/uniwue-logo.png" title="uniwue">
+        </div>
+        <div class="logo ls3-logo">
+            <img height="100px" src="/onos/ui/app/view/fingerprints/ls3-logo.png" title="ls3">
+        </div>
+        <div class="bmbf-logo">
+            <img src="/onos/ui/app/view/fingerprints/bmbf_logo.png" title="bmbf">
+        </div>
+    </div>
+
+
+    <div id="ov-fingerprint-right">
+
+        <div class="heading_container">
+            <div class="floatLeft">
+                <h2 class="heading"> Fingerprint Details</h2>
+            </div>
+
+            <div class="fingerprint-button info-button floatRight" ng-click="getData()">
+                Update
+            </div>
+            <div style="clear:both;"></div>
+        </div>
+
+
+        <h3 class="pending-heading">Fingerprint: {{data.devId}}</h3>
+        <div class="data-panel">
+            <table class="fingerprints-table pending-table">
+                <tr>
+                    <td class="label">Status</td>
+                    <td>{{data.statusFingerprint}}</td>
+                </tr>
+                <tr>
+                    <td class="label">Static Summary</td>
+                    <td>{{data.staticSummary}}</td>
+                </tr>
+                <tr>
+                    <td class="label">Dynamic Summary</td>
+                    <td>{{data.dynamicSummary}}</td>
+                </tr>
+                <tr>
+                    <td class="label">Chassis ID</td>
+                    <td>{{data.chassisId}}</td>
+                </tr>
+                <tr>
+                    <td class="label">Hardware Version</td>
+                    <td>{{data.hwVersion}}</td>
+                </tr>
+                <tr>
+                    <td class="label">Software Version</td>
+                    <td>{{data.swVersion}}</td>
+                </tr>
+                <tr>
+                    <td class="label">Hardware Version</td>
+                    <td>{{data.hwVersion}}</td>
+                </tr>
+                <tr>
+                    <td class="label">Manufacturer</td>
+                    <td>{{data.manufacturer}}</td>
+                </tr>
+                <tr>
+                    <td class="label">Serial</td>
+                    <td>{{data.serial}}</td>
+                </tr>
+                <tr>
+                    <td class="label">Management Address</td>
+                    <td>{{data.managementAddress}}</td>
+                </tr>
+                <tr>
+                    <td class="label">Openflow Version</td>
+                    <td>{{data.ofVersion}}</td>
+                </tr>
+                <tr>
+                    <td class="label">Number of Ports</td>
+                    <td>{{data.nrPorts}}</td>
+                </tr>
+
+            </table>
+        </div>
+
+
+    </div>
+
+    <div style="clear:both;"></div>
+
+</div>
